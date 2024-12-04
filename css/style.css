@@ -1,1374 +1,1448 @@
-
-
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
 }
 
 
 
-#b0 { display: none; }
+#b0 {
+    display: none;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.menuresponsivo,
+.responsiveicon,
+.listaresponsiva {
+    animation: slideIn 0.5s ease-out;
+}
 
 
-a, div.text_content { display: inline; padding: 0 10px; }
+a,
+div.text_content {
+    display: inline;
+    padding: 0 10px;
+}
 
 
-.menuresponsivo{
-    padding:30px;
+.menuresponsivo {
+    padding: 30px;
 
 }
 
-.imagemresponsiva{
+.imagemresponsiva {
     border-radius: 50px;
-    
-}
-
-
-.primeirasecao{
-    background-image:     linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)
-      ),
-      url("../images/imagemcontainer.jpg");
-      background-repeat: no-repeat; 
-      background-size: cover;
-    
-}
-
-@media screen and (min-width:1525px ){
-
-
-   
-
-    .menuresponsivo{
-        display:none}
-
-    .responsiveicon {
-        display: none;
-    }
-
-    .listaresponsiva{
-        display:none;
-    }
-html,body{overflow-x: hidden;}
-html, body{height: 100%;}
-
-
-body{
-   
-    background-color: #e0cbb5;
-}
-
-.primeirasecao{
-    width: 100%;
-    height: 100%;
-    
-}
-
-.segundasecao{
-    height:1500px;
-    
-}
-.menubox{
-    position: relative;
-    bottom:14%;
-    border-radius: 10px;
-    background-color:rgba(127, 126, 126, 0.4);
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    position: relative;
-    left:5%;
-    display:flex;
-    width: 1400px;
-    height:1000px;
-    
-    
-}
-
-
-.menuprodutos{
-
-    position: relative;
-    left:13%;
-    width:680px;
-    
 
 }
 
 
-.imagembox{
-    max-height: 200px;
-    position: relative;
-    left:7%;
-    top:3%;
-}
-
-.imagemmenu01 {
-
-    width: 520px;
-    height:600px;
-}
-
-.imagemmenu02 {
- 
-    width: 520px;
-    height:300px;
-    position:relative;
-    top:10%;
-}
-
-.titulo{
-    
-    padding-top:30px;
-    text-align: center;
-}
-
-#subtitulomenu{
-    position: relative;
-    top:23px;
-    font-size:21px;
-    color: white;
- font-weight: 300;
-}
-
-#titulomenu{
-    color: rgb(255, 255, 255);
-    font-size:30px;
-    font-weight: 200;
-}
-
-.listadeprodutos{
-    border-radius: 7px;
-    background: 20px;
-    border: white solid;
-    background-color: white;
-    position:relative;
-    top:20px;
-    
-}
-
-.produto {
-    
-    background-color: white;
-    width:57%;
-    height:80px;
-    margin-left:65px;
-    margin-top:15px;
-}
-.produtobox{
-    border-radius: 7px;
-    background-color: white;
-    position: relative;
-    top:50px;
-}
-
-.nomedoproduto{
-    background-color: white;
-    position: relative;
-    font-size: 18px;
-    font-weight: bold;
-    color: rgb(81, 78, 78);
-   
-    
-}
-
-.precodoproduto{
-    background-color: white;
-    float: right;
-    color: grey;
-    font-size: 18px;
-    font-weight: bold;
-    color: rgb(81, 78, 78);
-    
+.primeirasecao {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)),
+        url("../images/imagemcontainer.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 
 }
 
-.descricaodoproduto{
-    background-color: white;
-    text-align: center;
-    position: relative;
-    top:3px;
-    font-style: italic;
-    color: rgb(182, 175, 175);
-}
-
-.border{
-    border-bottom:1px solid black;
-    position: relative;
-    left:3px;
-    width: 99%;
-    margin-top: 10px;
-}
-
-
-.iconeresponsivo li {
-    position:relative;
-    left: 50px;
-    top: 45px;
-    padding-right:70px;
-    color: white;
-    display:inline
-}
-
-.navbar {
-    height: 90px;
-    background-color:rgba(1, 1, 1, 0.5);
-    position: fixed;
-    width: 100%;
-    z-index:2 ;
-}
-
+/* Efeito de transição nos links */
 a {
-    all: unset;
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
 }
 
-a:hover { color:rgb(131, 174, 229); }
+@media screen and (min-width:1525px) {
 
-.logotext{
-    color: white;
-    position: relative;
-    top:30%;
-    text-align: center;
-}
+    .segundasecao {
+        animation: slideIn 1s ease-out;
+    }
 
-.logotext h1{
-    font-family:cursive;
-    font-size:30px;
-    font-weight:800;
-    color: rgb(255, 255, 255);
-    padding-bottom: 70px;
-}
 
-.spanbottom{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20;
-    font-weight: 200;
-    margin-bottom: 15px;
-}
-
-.contato {
-    font-family:fantasy;
-    font-size: 25px;
-    font-style: italic;
-}
-
-.receitas{
-
-    width: 46%;
-    position: relative;
-    left: 26%;
-}
-
-.logobox{
-    left: 44%;
-    border: white solid;
-    width:190px;
-    height: 190px;
-    position: relative;
-    top:200px;;
-    text-align: center;
-}
-
-.logoimage{
-    position: relative;
-    top:17px;
-    border: white solid 1px;;
-    padding-top:17px;
-    position: relative;
-    left:23%;
-    width:100px;
-    height: 130px;
-}
-
-.logonome{
-    padding-top:13px;
-    color: white;
-}
-
-.break{
-    margin-top:170px;
-}
-
-.copyright
-{
-    float: right;
-}
-
-}
-
-@media screen and ( min-width:939px ) and (max-width:1524px ){
-
-    .menuresponsivo{
-        display:none}
+    .menuresponsivo {
+        display: none
+    }
 
     .responsiveicon {
         display: none;
     }
 
-    .listaresponsiva{
-        display:none;
+    .listaresponsiva {
+        display: none;
     }
-    html,body{overflow-x: hidden;}
-    html, body{height: 100%;}
-    
-    
-    body{
-       
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    html,
+    body {
+        height: 100%;
+    }
+
+
+    body {
+
         background-color: #e0cbb5;
     }
-    
-    .primeirasecao{
 
-        padding-bottom:20px;
+    .primeirasecao {
+        width: 100%;
+        height: 100%;
+
     }
-    
-    .segundasecao{
-        height:1500px;
-        
+
+    .segundasecao {
+        height: 1500px;
+
     }
-    .menubox{
-        margin:0 auto;
+
+    .menubox {
         position: relative;
-        bottom:14%;
+        bottom: 14%;
         border-radius: 10px;
-        background-color:rgba(127, 126, 126, 0.4);
+        background-color: rgba(127, 126, 126, 0.4);
         box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-        width: 700px;
-        height:1500px;
-        top:1%
-
-        
-        
-    }
-    
-    
-    .menuprodutos{
-        margin:0 auto;
         position: relative;
-        left:0%;
-        top:10%;
-        width:680px;
-        
-    
+        left: 5%;
+        display: flex;
+        width: 1400px;
+        height: 1000px;
+
+
     }
-    
-    
-    .imagembox{
+
+
+    .menuprodutos {
+
+        position: relative;
+        left: 13%;
+        width: 680px;
+
+
+    }
+
+
+    .imagembox {
         max-height: 200px;
         position: relative;
-        top:3%;
+        left: 7%;
+        top: 3%;
     }
-    
+
     .imagemmenu01 {
-        display:none;
+
         width: 520px;
-        height:600px;
+        height: 600px;
     }
-    
+
     .imagemmenu02 {
-        margin: 0 auto;
+
         width: 520px;
-        height:300px;
-        position:relative;
-        top:10%;
+        height: 300px;
+        position: relative;
+        top: 10%;
     }
-    
-    .titulo{
-        
-        padding-top:30px;
+
+    .titulo {
+
+        padding-top: 30px;
         text-align: center;
     }
-    
-    #subtitulomenu{
+
+    #subtitulomenu {
         position: relative;
-        top:23px;
-        font-size:21px;
+        top: 23px;
+        font-size: 21px;
         color: white;
-     font-weight: 300;
+        font-weight: 300;
     }
-    
-    #titulomenu{
+
+    #titulomenu {
         color: rgb(255, 255, 255);
-        font-size:30px;
+        font-size: 30px;
         font-weight: 200;
     }
-    
-    .listadeprodutos{
+
+    .listadeprodutos {
         border-radius: 7px;
         background: 20px;
         border: white solid;
         background-color: white;
-        position:relative;
-        top:20px;
-        
-    }
-    
-    .produto {
-    
-        background-color: white;
-        width:57%;
-        height:80px;
-        margin-left:65px;
-        margin-top:15px;
+        position: relative;
+        top: 20px;
+
     }
 
-    .produtobox{
+    .produto {
+
+        background-color: white;
+        width: 57%;
+        height: 80px;
+        margin-left: 65px;
+        margin-top: 15px;
+    }
+
+    .produtobox {
         border-radius: 7px;
         background-color: white;
         position: relative;
-        top:50px;
-}
+        top: 50px;
+    }
 
-    
-    .nomedoproduto{
+    .nomedoproduto {
         background-color: white;
         position: relative;
         font-size: 18px;
         font-weight: bold;
         color: rgb(81, 78, 78);
-       
-        
+
+
     }
-    
-    .precodoproduto{
+
+    .precodoproduto {
         background-color: white;
         float: right;
         color: grey;
         font-size: 18px;
         font-weight: bold;
         color: rgb(81, 78, 78);
-        
-    
+
+
     }
 
-    .descricaodoproduto{
+    .descricaodoproduto {
         background-color: white;
         text-align: center;
         position: relative;
-        top:3px;
+        top: 3px;
         font-style: italic;
         color: rgb(182, 175, 175);
-}
+    }
 
-.border{
-        border-bottom:1px solid black;
+    .border {
+        border-bottom: 1px solid black;
         position: relative;
-        left:3px;
+        left: 3px;
         width: 99%;
         margin-top: 10px;
-}
-    
+    }
+
+
     .iconeresponsivo li {
-        position:relative;
+        position: relative;
         left: 50px;
         top: 45px;
-        padding-right:70px;
+        padding-right: 70px;
         color: white;
-        display:inline
+        display: inline
     }
-    
+
     .navbar {
         height: 90px;
-        background-color:rgba(1, 1, 1, 0.5);
-        position: fixed;
+        font-weight: bold;
+
         width: 100%;
-        z-index:2 ;
+        z-index: 2;
     }
-    
+
     a {
         all: unset;
     }
-    
-    a:hover { color:rgb(131, 174, 229); }
-    
-    .logotext{
+
+    a:hover {
+        color: rgb(131, 174, 229);
+    }
+
+    .logotext {
         color: white;
         position: relative;
-        top:30%;
+        top: 30%;
         text-align: center;
     }
-    
-    .logotext h1{
-        font-family:cursive;
-        font-size:37px;
-        font-weight:800;
+
+    .logotext h1 {
+        font-family: cursive;
+        font-size: 30px;
+        font-weight: 800;
         color: rgb(255, 255, 255);
         padding-bottom: 70px;
-        
     }
-    
-    .spanbottom{
+
+    .spanbottom {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 20;
+        font-weight: 200;
+        margin-bottom: 15px;
+    }
+
+    .contato {
+        font-family: fantasy;
+        font-size: 25px;
+        font-style: italic;
+    }
+
+    .receitas {
+
+        width: 46%;
+        position: relative;
+        left: 26%;
+    }
+
+    .logobox {
+        left: 44%;
+        border: white solid;
+        width: 190px;
+        height: 190px;
+        position: relative;
+        top: 200px;
+        ;
+        text-align: center;
+    }
+
+    .logoimage {
+        position: relative;
+        top: 17px;
+        border: white solid 1px;
+        ;
+        padding-top: 17px;
+        position: relative;
+        left: 23%;
+        width: 100px;
+        height: 130px;
+    }
+
+    .logonome {
+        padding-top: 13px;
+        color: white;
+    }
+
+    .break {
+        margin-top: 170px;
+    }
+
+    .copyright {
+        float: right;
+    }
+
+}
+
+@media screen and (min-width:939px) and (max-width:1524px) {
+
+    .menuresponsivo {
+        display: none
+    }
+
+    .responsiveicon {
+        display: none;
+    }
+
+    .listaresponsiva {
+        display: none;
+    }
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    html,
+    body {
+        height: 100%;
+    }
+
+
+    body {
+
+        background-color: #e0cbb5;
+    }
+
+    .primeirasecao {
+
+        padding-bottom: 20px;
+    }
+
+    .segundasecao {
+        height: 1500px;
+
+    }
+
+    .menubox {
+        margin: 0 auto;
+        position: relative;
+        bottom: 14%;
+        border-radius: 10px;
+        background-color: rgba(127, 126, 126, 0.4);
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        width: 700px;
+        height: 1500px;
+        top: 1%
+    }
+
+
+    .menuprodutos {
+        margin: 0 auto;
+        position: relative;
+        left: 0%;
+        top: 10%;
+        width: 680px;
+
+
+    }
+
+
+    .imagembox {
+        max-height: 200px;
+        position: relative;
+        top: 3%;
+    }
+
+    .imagemmenu01 {
+        display: none;
+        width: 520px;
+        height: 600px;
+    }
+
+    .imagemmenu02 {
+        margin: 0 auto;
+        width: 520px;
+        height: 300px;
+        position: relative;
+        top: 10%;
+    }
+
+    .titulo {
+
+        padding-top: 30px;
+        text-align: center;
+    }
+
+    #subtitulomenu {
+        position: relative;
+        top: 23px;
+        font-size: 21px;
+        color: white;
+        font-weight: 300;
+    }
+
+    #titulomenu {
+        color: rgb(255, 255, 255);
+        font-size: 30px;
+        font-weight: 200;
+    }
+
+    .listadeprodutos {
+        border-radius: 7px;
+        background: 20px;
+        border: white solid;
+        background-color: white;
+        position: relative;
+        top: 20px;
+
+    }
+
+    .produto {
+
+        background-color: white;
+        width: 57%;
+        height: 80px;
+        margin-left: 65px;
+        margin-top: 15px;
+    }
+
+    .produtobox {
+        border-radius: 7px;
+        background-color: white;
+        position: relative;
+        top: 50px;
+    }
+
+
+    .nomedoproduto {
+        background-color: white;
+        position: relative;
+        font-size: 18px;
+        font-weight: bold;
+        color: rgb(81, 78, 78);
+
+
+    }
+
+    .precodoproduto {
+        background-color: white;
+        float: right;
+        color: grey;
+        font-size: 18px;
+        font-weight: bold;
+        color: rgb(81, 78, 78);
+
+
+    }
+
+    .descricaodoproduto {
+        background-color: white;
+        text-align: center;
+        position: relative;
+        top: 3px;
+        font-style: italic;
+        color: rgb(182, 175, 175);
+    }
+
+    .border {
+        border-bottom: 1px solid black;
+        position: relative;
+        left: 3px;
+        width: 99%;
+        margin-top: 10px;
+    }
+
+    .iconeresponsivo li {
+        position: relative;
+        left: 50px;
+        top: 45px;
+        padding-right: 70px;
+        color: white;
+        display: inline
+    }
+
+    .navbar {
+        height: 90px;
+        font-weight: bold;
+        width: 100%;
+        z-index: 2;
+    }
+
+    a {
+        all: unset;
+    }
+
+    a:hover {
+        color: rgb(131, 174, 229);
+    }
+
+    .logotext {
+        color: white;
+        position: relative;
+        top: 30%;
+        text-align: center;
+    }
+
+    .logotext h1 {
+        font-family: cursive;
+        font-size: 37px;
+        font-weight: 800;
+        color: rgb(255, 255, 255);
+        padding-bottom: 70px;
+
+    }
+
+    .spanbottom {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-size: 20;
         font-weight: 200;
         margin-bottom: 30px;
     }
-    
+
     .contato {
-        font-family:fantasy;
+        font-family: fantasy;
         font-size: 25px;
         font-style: italic;
     }
-    
-    .receitas{
-    
+
+    .receitas {
+
         width: 500px;
         position: relative;
         left: 26%;
     }
-    
-    .logobox{
+
+    .logobox {
         left: 44%;
-       top:10%;
-        width:190px;
+        top: 10%;
+        width: 190px;
         height: 190px;
         position: relative;
-        
+
     }
-    
-    .logoimage{
+
+    .logoimage {
         display: none;
         position: relative;
-        top:17px;
-        border: white solid 1px;;
-        padding-top:17px;
+        top: 17px;
+        border: white solid 1px;
+        ;
+        padding-top: 17px;
         position: relative;
-        left:23%;
-        width:100px;
+        left: 23%;
+        width: 100px;
         height: 130px;
     }
-    
-    .logonome{
-        padding-top:13px;
+
+    .logonome {
+        padding-top: 13px;
         color: white;
     }
-    
-    .break{
-        margin-top:170px;
+
+    .break {
+        margin-top: 170px;
     }
-    
-    .copyright
-    {
+
+    .copyright {
         float: right;
     }
-    
-            
+
+
 }
-        
-@media screen and (min-width:717px ) and (max-width:938px ){
-    .iconeresponsivo{
-    display:none}
+
+@media screen and (min-width:717px) and (max-width:938px) {
+    .iconeresponsivo {
+        display: none
+    }
 
     .responsiveicon {
         display: none;
     }
 
-    html,body{overflow-x: hidden;}
-    html, body{height: 100%;}
-    
-    
-    body{
-       
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    html,
+    body {
+        height: 100%;
+    }
+
+
+    body {
+
         background-color: #e0cbb5;
     }
-    
-    .primeirasecao{
 
-        width:1000px;
-        padding-bottom:20px;
+    .primeirasecao {
+
+        width: 1000px;
+        padding-bottom: 20px;
     }
-    
-    .segundasecao{
-        height:1500px;
-        
+
+    .segundasecao {
+        height: 1500px;
+
     }
-    .menubox{
-        margin:0 auto;
+
+    .menubox {
+        margin: 0 auto;
         position: relative;
-        bottom:14%;
+        bottom: 14%;
         border-radius: 10px;
-        background-color:rgba(127, 126, 126, 0.4);
+        background-color: rgba(127, 126, 126, 0.4);
         box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
         width: 483px;
-        height:1500px;
-        top:1%
+        height: 1500px;
+        top: 1%
+    }
 
-        
-        
-    }
-    
-    
-    .menuprodutos{
-        margin:0 auto;
+
+    .menuprodutos {
+        margin: 0 auto;
         position: relative;
-        left:0%;
-        top:10%;
-        width:450px;
-        
-    
+        left: 0%;
+        top: 10%;
+        width: 450px;
+
+
     }
-    
-    
-    .imagembox{
-      
+
+
+    .imagembox {
+
         max-height: 200px;
         position: relative;
-        top:3%;
+        top: 3%;
     }
-    
+
     .imagemmenu01 {
-        display:none;
-        width: 520px;
-        height:600px;
-    }
-    
-    .imagemmenu02 {
-
-        margin: 0 auto;
-        width: 520px;
-        height:300px;
-        position:relative;
-        top:10%;
-    }
-
-    .imagemresponsiva{
-        width: 483px;
-        
-    }
-    
-    .titulo{
-        
-        padding-top:30px;
-        text-align: center;
-    }
-    
-    #subtitulomenu{
-        position: relative;
-        top:23px;
-        font-size:21px;
-        color: white;
-     font-weight: 300;
-    }
-    
-    #titulomenu{
-        color: rgb(255, 255, 255);
-        font-size:30px;
-        font-weight: 200;
-    }
-    
-    .listadeprodutos{
-        border-radius: 7px;
-        background: 20px;
-        border: white solid;
-        background-color: white;
-        position:relative;
-        top:20px;
-        
-    }
-    
-    .produto {
-    
-        background-color: white;
-        width:57%;
-        height:80px;
-        margin-left:65px;
-        margin-top:15px;
-    }
-    
-    .produtobox{
-        border-radius: 7px;
-        background-color: white;
-        position: relative;
-        top:50px;
-}
-    
-    .nomedoproduto{
-        background-color: white;
-        position: relative;
-        font-size: 18px;
-        font-weight: bold;
-        color: rgb(81, 78, 78);
-       
-        
-    }
-    
-    .precodoproduto{
-        background-color: white;
-        float: right;
-        color: grey;
-        font-size: 18px;
-        font-weight: bold;
-        color: rgb(81, 78, 78);
-        
-    
-    }
-
-    .descricaodoproduto{
-        background-color: white;
-        text-align: center;
-        position: relative;
-        top:3px;
-        font-style: italic;
-        color: rgb(182, 175, 175);
-}
-    
-.border{
-        border-bottom:1px solid black;
-        position: relative;
-        left:3px;
-        width: 99%;
-        margin-top: 10px;
-}
-    
-    .iconeresponsivo li {
-        position:relative;
-        left: 50px;
-        top: 45px;
-        padding-right:70px;
-        color: white;
-        display:inline
-    }
-    
-    .navbar {
-        height: 90px;
-
-        background-color:rgba(1, 1, 1, 0.5);
-        position: fixed;
-        width: 100%;
-        z-index:2 ;
-    }
-    
-    a {
-        all: unset;
-    }
-    
-    a:hover { color:rgb(131, 174, 229); }
-    
-    .logotext{
-        color: white;
-        position: relative;
-        top:30%;
-        text-align: center;
-    }
-    
-    .logotext h1{
-        font-family:cursive;
-        font-size:25px;
-        font-weight:800;
-        color: rgb(255, 255, 255);
-        padding-bottom: 70px;
-        
-    }
-    
-    .spanbottom{
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 20;
-        font-weight: 200;
-        display:none;
-        margin-bottom: 30px;
-    }
-    
-    .contato {
-        font-family:fantasy;
-        font-size: 25px;
-        font-style: italic;
-    }
-    
-    .receitas{
-        width: 500px;
-        position: relative;
-        left:17%;
-    }
-    
-    .logobox{
-        left: 44%;
-       top:10%;
-        width:190px;
-        height: 190px;
-        position: relative;
-        
-    }
-    
-    .logoimage{
         display: none;
-        position: relative;
-        top:17px;
-        border: white solid 1px;;
-        padding-top:17px;
-        position: relative;
-        left:23%;
-        width:100px;
-        height: 130px;
-    }
-    
-    .logonome{
-        padding-top:13px;
-        color: white;
-    }
-    
-    .break{
-        margin-top:170px;
-    }
-    
-    .copyright
-    {
-        float: right;
-    }
-    
-            
-}
-
-@media screen  and ( min-width:514px ) and (max-width:716px ){
-    .iconeresponsivo{
-        display:none}
-
-
-    html,body{overflow-x: hidden;}
-    html, body{height: 100%;}
-    
-    
-    body{
-       
-        background-color: #e0cbb5;
-    }
-    
-    .primeirasecao{
-
-
-        padding-bottom:20px;
-    }
-    
-    .segundasecao{
-        height:1500px;
-        
-    }
-    .menubox{
-        margin:0 auto;
-        position: relative;
-        bottom:14%;
-        border-radius: 10px;
-        background-color:rgba(127, 126, 126, 0.4);
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-        width: 483px;
-        height:1500px;
-    
-        top:1%
-
-        
-        
-    }
-    
-    
-    .menuprodutos{
-        margin:0 auto;
-        position: relative;
-        left:0%;
-        top:10%;
-        width:450px;
-        
-    
-    }
-    
-    
-    .imagembox{
-      
-        max-height: 200px;
-        position: relative;
-        top:3%;
-    }
-    
-    .imagemmenu01 {
-        display:none;
         width: 520px;
-        height:600px;
+        height: 600px;
     }
-    
+
     .imagemmenu02 {
 
         margin: 0 auto;
         width: 520px;
-        height:300px;
-        position:relative;
-        top:10%;
+        height: 300px;
+        position: relative;
+        top: 10%;
     }
 
-    .imagemresponsiva{
+    .imagemresponsiva {
         width: 483px;
-    
+
     }
-    
-    .titulo{
-        
-        padding-top:30px;
+
+    .titulo {
+
+        padding-top: 30px;
         text-align: center;
     }
-    
-    #subtitulomenu{
-        position: relative;
-        top:23px;
-        font-size:21px;
-        color: white;
-     font-weight: 300;
-    }
-    
-    #titulomenu{
-        color: rgb(255, 255, 255);
-        font-size:30px;
-        font-weight: 200;
-    }
-    
-    .listadeprodutos{
-        border-radius: 7px;
-        background: 20px;
-        border: white solid;
-        background-color: white;
-        position:relative;
-        top:20px;
-        
-    }
-    
-    .produto {
-    
-        background-color: white;
-        width:57%;
-        height:80px;
-        margin-left:65px;
-        margin-top:15px;
-    }
-    
-    .produtobox{
-        border-radius: 7px;
-        background-color: white;
-        position: relative;
-        top:50px;
-}
 
-    
-    .nomedoproduto{
-        background-color: white;
+    #subtitulomenu {
         position: relative;
-        font-size: 18px;
-        font-weight: bold;
-        color: rgb(81, 78, 78);
-       
-        
-    }
-    
-    .precodoproduto{
-        background-color: white;
-        float: right;
-        color: grey;
-        font-size: 18px;
-        font-weight: bold;
-        color: rgb(81, 78, 78);
-        
-    
-    }
-
-
-.descricaodoproduto{
-        background-color: white;
-        text-align: center;
-        position: relative;
-        top:3px;
-        font-style: italic;
-        color: rgb(182, 175, 175);
-}
-    
-.border{
-    border-bottom:1px solid black;
-    position: relative;
-    left:3px;
-    width: 99%;
-    margin-top: 10px;
-}
-
-    
-    .iconeresponsivo li {
-        position:relative;
-        left: 50px;
-        top: 45px;
-        padding-right:70px;
-        color: white;
-        display:inline
-    }
-    
-    .navbar {
-        height: 90px;
-        background-color:rgba(1, 1, 1, 0.5);
-        position: fixed;
-        width: 100%;
-        z-index:2 ;
-    }
-    
-    a {
-        all: unset;
-    }
-    
-    a:hover { color:rgb(131, 174, 229); }
-    
-    .logotext{
-        color: white;
-        position: relative;
-        top:30%;
-        text-align: center;
-    }
-    
-    .logotext h1{
-        font-family:cursive;
-        font-size:27px;
-        font-weight:800;
-        color: rgb(255, 255, 255);
-        padding-bottom: 70px;
-        
-    }
-    
-    .spanbottom{
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 20;
-        font-weight: 200;
-        display:none;
-        margin-bottom: 30px;
-    }
-    
-    .contato {
-        font-family:fantasy;
-        font-size: 25px;
-        font-style: italic;
-    }
-    
-    .receitas{
-    
-        width: 500px;
-        position: relative;
-        left: 0%
-    }
-    
-    .logobox{
-        left: 44%;
-       top:10%;
-        width:190px;
-        height: 190px;
-        position: relative;
-        
-    }
-    
-    .logoimage{
-        display: none;
-        position: relative;
-        top:17px;
-        border: white solid 1px;;
-        padding-top:17px;
-        position: relative;
-        left:23%;
-        width:100px;
-        height: 130px;
-    }
-    
-    .logonome{
-        padding-top:13px;
-        color: white;
-    }
-    
-    .break{
-        margin-top:170px;
-    }
-    
-    .copyright
-    {
-        float: right;
-    }
-    
-            
-}
-
-@media screen  and (max-width:513px ){
-    .iconeresponsivo{
-        display:none}
-
-
-    html,body{overflow-x: hidden;}
-    html, body{height: 100%;}
-    
-    
-    body{
-       
-        background-color: #e0cbb5;
-    }
-    
-    .primeirasecao{
-
-        padding-bottom:20px;
-    }
-    
-    .segundasecao{
-        height:1500px;
-        
-    }
-    .menubox{
-        margin:0 auto;
-        position: relative;
-        bottom:14%;
-        border-radius: 10px;
-        background-color:rgba(127, 126, 126, 0.4);
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-        width: 483px;
-        height:1500px;
-    
-        top:1%
-
-        
-        
-    }
-    
-    
-    .menuprodutos{
-        margin:0 auto;
-        position: relative;
-        left:0%;
-        top:10%;
-        width:450px;
-        
-    
-    }
-    
-    
-    .imagembox{
-      
-        max-height: 200px;
-        position: relative;
-        top:3%;
-    }
-    
-    .imagemmenu01 {
-        display:none;
-        width: 520px;
-        height:600px;
-    }
-    
-    .imagemmenu02 {
-
-        margin: 0 auto;
-        width: 520px;
-        height:300px;
-        position:relative;
-        top:10%;
-    }
-
-    .imagemresponsiva{
-        width: 483px;
-    
-    }
-    
-    .titulo{
-        
-        padding-top:30px;
-        text-align: left;
-    }
-    
-    #subtitulomenu{
-        position: relative;
-        top:23px;
-        font-size:21px;
+        top: 23px;
+        font-size: 21px;
         color: white;
         font-weight: 300;
     }
-    
-    #titulomenu{
+
+    #titulomenu {
         color: rgb(255, 255, 255);
-        font-size:30px;
+        font-size: 30px;
         font-weight: 200;
     }
-    
-    .listadeprodutos{
+
+    .listadeprodutos {
         border-radius: 7px;
         background: 20px;
         border: white solid;
         background-color: white;
-        position:relative;
-        top:20px;
-        
+        position: relative;
+        top: 20px;
+
     }
-    
+
     .produto {
-    
+
         background-color: white;
-        width:57%;
-        height:80px;
-        margin-left:65px;
-        margin-top:15px;
+        width: 57%;
+        height: 80px;
+        margin-left: 65px;
+        margin-top: 15px;
     }
-    
-    .produtobox{
+
+    .produtobox {
         border-radius: 7px;
         background-color: white;
         position: relative;
-        top:50px;
+        top: 50px;
     }
-    
-    .nomedoproduto{
+
+    .nomedoproduto {
         background-color: white;
         position: relative;
         font-size: 18px;
         font-weight: bold;
         color: rgb(81, 78, 78);
-       
-        
+
+
     }
-    
-    .precodoproduto{
+
+    .precodoproduto {
         background-color: white;
         float: right;
         color: grey;
         font-size: 18px;
         font-weight: bold;
         color: rgb(81, 78, 78);
-        
-    
+
+
     }
-    .descricaodoproduto{
+
+    .descricaodoproduto {
         background-color: white;
         text-align: center;
         position: relative;
-        top:3px;
+        top: 3px;
         font-style: italic;
         color: rgb(182, 175, 175);
     }
-    
-    .border{
-        border-bottom:1px solid black;
+
+    .border {
+        border-bottom: 1px solid black;
         position: relative;
-        left:3px;
+        left: 3px;
         width: 99%;
         margin-top: 10px;
     }
-    
-    
+
     .iconeresponsivo li {
-        position:relative;
+        position: relative;
         left: 50px;
         top: 45px;
-        padding-right:70px;
+        padding-right: 70px;
         color: white;
-        display:inline
+        display: inline
     }
-    
+
     .navbar {
         height: 90px;
-        background-color:rgba(1, 1, 1, 0.5);
-        position: fixed;
+
+
         width: 100%;
-        z-index:2 ;
+        z-index: 2;
     }
-    
+
     a {
         all: unset;
     }
-    
-    a:hover { color:rgb(131, 174, 229); }
-    
-    .logotext{
+
+    a:hover {
+        color: rgb(131, 174, 229);
+    }
+
+    .logotext {
         color: white;
         position: relative;
-        top:30%;
-        text-align: left;
+        top: 30%;
+        text-align: center;
     }
-    
-    .logotext h1{
-        font-family:cursive;
-        font-size:20px;
-        font-weight:800;
+
+    .logotext h1 {
+        font-family: cursive;
+        font-size: 25px;
+        font-weight: 800;
         color: rgb(255, 255, 255);
         padding-bottom: 70px;
-        
+
     }
-    
-    .spanbottom{
+
+    .spanbottom {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-size: 20;
         font-weight: 200;
-        display:none;
+        display: none;
         margin-bottom: 30px;
     }
-    
+
     .contato {
-        font-family:fantasy;
-        font-size: 20px;
+        font-family: fantasy;
+        font-size: 25px;
         font-style: italic;
     }
-    
-    .receitas{
-    
+
+    .receitas {
+        width: 500px;
+        position: relative;
+        left: 17%;
+    }
+
+    .logobox {
+        left: 44%;
+        top: 10%;
+        width: 190px;
+        height: 190px;
+        position: relative;
+
+    }
+
+    .logoimage {
+        display: none;
+        position: relative;
+        top: 17px;
+        border: white solid 1px;
+        ;
+        padding-top: 17px;
+        position: relative;
+        left: 23%;
+        width: 100px;
+        height: 130px;
+    }
+
+    .logonome {
+        padding-top: 13px;
+        color: white;
+    }
+
+    .break {
+        margin-top: 170px;
+    }
+
+    .copyright {
+        float: right;
+    }
+
+
+}
+
+@media screen and (min-width:514px) and (max-width:716px) {
+    .iconeresponsivo {
+        display: none
+    }
+
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    html,
+    body {
+        height: 100%;
+    }
+
+
+    body {
+
+        background-color: #e0cbb5;
+    }
+
+    .primeirasecao {
+
+
+        padding-bottom: 20px;
+    }
+
+    .segundasecao {
+        height: 1500px;
+
+    }
+
+    .menubox {
+        margin: 0 auto;
+        position: relative;
+        bottom: 14%;
+        border-radius: 10px;
+        background-color: rgba(127, 126, 126, 0.4);
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        width: 483px;
+        height: 1500px;
+
+        top: 1%
+    }
+
+
+    .menuprodutos {
+        margin: 0 auto;
+        position: relative;
+        left: 0%;
+        top: 10%;
+        width: 450px;
+
+
+    }
+
+
+    .imagembox {
+
+        max-height: 200px;
+        position: relative;
+        top: 3%;
+    }
+
+    .imagemmenu01 {
+        display: none;
+        width: 520px;
+        height: 600px;
+    }
+
+    .imagemmenu02 {
+
+        margin: 0 auto;
+        width: 520px;
+        height: 300px;
+        position: relative;
+        top: 10%;
+    }
+
+    .imagemresponsiva {
+        width: 483px;
+
+    }
+
+    .titulo {
+
+        padding-top: 30px;
+        text-align: center;
+    }
+
+    #subtitulomenu {
+        position: relative;
+        top: 23px;
+        font-size: 21px;
+        color: white;
+        font-weight: 300;
+    }
+
+    #titulomenu {
+        color: rgb(255, 255, 255);
+        font-size: 30px;
+        font-weight: 200;
+    }
+
+    .listadeprodutos {
+        border-radius: 7px;
+        background: 20px;
+        border: white solid;
+        background-color: white;
+        position: relative;
+        top: 20px;
+
+    }
+
+    .produto {
+
+        background-color: white;
+        width: 57%;
+        height: 80px;
+        margin-left: 65px;
+        margin-top: 15px;
+    }
+
+    .produtobox {
+        border-radius: 7px;
+        background-color: white;
+        position: relative;
+        top: 50px;
+    }
+
+
+    .nomedoproduto {
+        background-color: white;
+        position: relative;
+        font-size: 18px;
+        font-weight: bold;
+        color: rgb(81, 78, 78);
+
+
+    }
+
+    .precodoproduto {
+        background-color: white;
+        float: right;
+        color: grey;
+        font-size: 18px;
+        font-weight: bold;
+        color: rgb(81, 78, 78);
+
+
+    }
+
+
+    .descricaodoproduto {
+        background-color: white;
+        text-align: center;
+        position: relative;
+        top: 3px;
+        font-style: italic;
+        color: rgb(182, 175, 175);
+    }
+
+    .border {
+        border-bottom: 1px solid black;
+        position: relative;
+        left: 3px;
+        width: 99%;
+        margin-top: 10px;
+    }
+
+
+    .iconeresponsivo li {
+        position: relative;
+        left: 50px;
+        top: 45px;
+        padding-right: 70px;
+        color: white;
+        display: inline
+    }
+
+    .navbar {
+        height: 90px;
+
+        width: 100%;
+        z-index: 2;
+    }
+
+    a {
+        all: unset;
+    }
+
+    a:hover {
+        color: rgb(131, 174, 229);
+    }
+
+    .logotext {
+        color: white;
+        position: relative;
+        top: 30%;
+        text-align: center;
+    }
+
+    .logotext h1 {
+        font-family: cursive;
+        font-size: 27px;
+        font-weight: 800;
+        color: rgb(255, 255, 255);
+        padding-bottom: 70px;
+
+    }
+
+    .spanbottom {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 20;
+        font-weight: 200;
+        display: none;
+        margin-bottom: 30px;
+    }
+
+    .contato {
+        font-family: fantasy;
+        font-size: 25px;
+        font-style: italic;
+    }
+
+    .receitas {
+
         width: 500px;
         position: relative;
         left: 0%
     }
-    
-    .logobox{
+
+    .logobox {
         left: 44%;
-       top:10%;
-        width:190px;
+        top: 10%;
+        width: 190px;
         height: 190px;
         position: relative;
-        
+
     }
-    
-    .logoimage{
+
+    .logoimage {
         display: none;
         position: relative;
-        top:17px;
-        border: white solid 1px;;
-        padding-top:17px;
+        top: 17px;
+        border: white solid 1px;
+        ;
+        padding-top: 17px;
         position: relative;
-        left:23%;
-        width:100px;
+        left: 23%;
+        width: 100px;
         height: 130px;
     }
-    
-    .logonome{
-        padding-top:13px;
+
+    .logonome {
+        padding-top: 13px;
         color: white;
     }
-    
-    .break{
-        margin-top:170px;
+
+    .break {
+        margin-top: 170px;
     }
-    
-    .copyright
-    {
+
+    .copyright {
         float: right;
     }
-    
-            
+
+
 }
 
-.copyright
-{   
+@media screen and (max-width:513px) {
+    .iconeresponsivo {
+        display: none
+    }
+
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    html,
+    body {
+        height: 100%;
+    }
+
+
+    body {
+
+        background-color: #e0cbb5;
+    }
+
+    .primeirasecao {
+
+        padding-bottom: 20px;
+    }
+
+    .segundasecao {
+        height: 1500px;
+
+    }
+
+    .menubox {
+        margin: 0 auto;
+        position: relative;
+        bottom: 14%;
+        border-radius: 10px;
+        background-color: rgba(127, 126, 126, 0.4);
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        width: 483px;
+        height: 1500px;
+
+        top: 1%
+    }
+
+
+    .menuprodutos {
+        margin: 0 auto;
+        position: relative;
+        left: 0%;
+        top: 10%;
+        width: 450px;
+
+
+    }
+
+
+    .imagembox {
+
+        max-height: 200px;
+        position: relative;
+        top: 3%;
+    }
+
+    .imagemmenu01 {
+        display: none;
+        width: 520px;
+        height: 600px;
+    }
+
+    .imagemmenu02 {
+
+        margin: 0 auto;
+        width: 520px;
+        height: 300px;
+        position: relative;
+        top: 10%;
+    }
+
+    .imagemresponsiva {
+        width: 483px;
+
+    }
+
+    .titulo {
+
+        padding-top: 30px;
+        text-align: left;
+    }
+
+    #subtitulomenu {
+        position: relative;
+        top: 23px;
+        font-size: 21px;
+        color: white;
+        font-weight: 300;
+    }
+
+    #titulomenu {
+        color: rgb(255, 255, 255);
+        font-size: 30px;
+        font-weight: 200;
+    }
+
+    .listadeprodutos {
+        border-radius: 7px;
+        background: 20px;
+        border: white solid;
+        background-color: white;
+        position: relative;
+        top: 20px;
+
+    }
+
+    .produto {
+
+        background-color: white;
+        width: 57%;
+        height: 80px;
+        margin-left: 65px;
+        margin-top: 15px;
+    }
+
+    .produtobox {
+        border-radius: 7px;
+        background-color: white;
+        position: relative;
+        top: 50px;
+    }
+
+    .nomedoproduto {
+        background-color: white;
+        position: relative;
+        font-size: 18px;
+        font-weight: bold;
+        color: rgb(81, 78, 78);
+
+
+    }
+
+    .precodoproduto {
+        background-color: white;
+        float: right;
+        color: grey;
+        font-size: 18px;
+        font-weight: bold;
+        color: rgb(81, 78, 78);
+
+
+    }
+
+    .descricaodoproduto {
+        background-color: white;
+        text-align: center;
+        position: relative;
+        top: 3px;
+        font-style: italic;
+        color: rgb(182, 175, 175);
+    }
+
+    .border {
+        border-bottom: 1px solid black;
+        position: relative;
+        left: 3px;
+        width: 99%;
+        margin-top: 10px;
+    }
+
+
+    .iconeresponsivo li {
+        position: relative;
+        left: 50px;
+        top: 45px;
+        padding-right: 70px;
+        color: white;
+        display: inline
+    }
+
+    .navbar {
+        height: 90px;
+
+        width: 100%;
+        z-index: 2;
+    }
+
+    a {
+        all: unset;
+    }
+
+    a:hover {
+        color: rgb(131, 174, 229);
+    }
+
+    .logotext {
+        color: white;
+        position: relative;
+        top: 30%;
+        text-align: left;
+    }
+
+    .logotext h1 {
+        font-family: cursive;
+        font-size: 20px;
+        font-weight: 800;
+        color: rgb(255, 255, 255);
+        padding-bottom: 70px;
+
+    }
+
+    .spanbottom {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 20;
+        font-weight: 200;
+        display: none;
+        margin-bottom: 30px;
+    }
+
+    .contato {
+        font-family: fantasy;
+        font-size: 20px;
+        font-style: italic;
+    }
+
+    .receitas {
+
+        width: 500px;
+        position: relative;
+        left: 0%
+    }
+
+    .logobox {
+        left: 44%;
+        top: 10%;
+        width: 190px;
+        height: 190px;
+        position: relative;
+
+    }
+
+    .logoimage {
+        display: none;
+        position: relative;
+        top: 17px;
+        border: white solid 1px;
+        ;
+        padding-top: 17px;
+        position: relative;
+        left: 23%;
+        width: 100px;
+        height: 130px;
+    }
+
+    .logonome {
+        padding-top: 13px;
+        color: white;
+    }
+
+    .break {
+        margin-top: 170px;
+    }
+
+    .copyright {
+        float: right;
+    }
+
+
+}
+
+.copyright {
     width: 100%;
-    background-color:rgb(22, 22, 22);
+    background-color: rgb(22, 22, 22);
     color: rgb(255, 255, 255);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    margin-top:40px;
-}          
-        
+    margin-top: 40px;
+}
+
 .copytext {
     color: rgb(253, 253, 253);
     float: right;
     position: relative;
-    right:1%;
-    
-    
+    right: 1%;
+
+
 }
- 
+
 .listaresponsiva li {
     list-style-type: none;
     color: antiquewhite;
     position: relative;
-    bottom:20px;
-    padding-left:30px;
-    padding-top:10px;
-    width:200px;
-    font-size:18px;
-    background-color:rgba(1, 1, 1, 0.7);
+    bottom: 20px;
+    padding-left: 30px;
+    padding-top: 10px;
+    width: 200px;
+    font-size: 18px;
+
 }
 
-.border02{border-bottom:1px solid white;}
+.border02 {
+    border-bottom: 1px solid white;
+}
